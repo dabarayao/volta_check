@@ -9,6 +9,7 @@ import axios from 'axios';
 
 import logo from "../assets/volta_check.png";
 import 'bootstrap/dist/css/bootstrap.css';
+import './home.scss';
 
 /* link for the ip datas api 
 https://app.ipgeolocation.io/
@@ -17,7 +18,7 @@ https://app.ipgeolocation.io/
 
 function IpDatas() {
     
-    const [intDatas, SetIntDatas] = useState({ org: "", country: "", city: "", ip: "" });
+    const [intDatas, SetIntDatas] = useState({ org: "", country: "", city: "", ip: "", country_flag: "", currency: "", calling_code: "", continent_name: ""});
     const [collapseState, setCollapseState] = useState("");
 
 
@@ -33,7 +34,16 @@ function IpDatas() {
             var resPattern = response.data;
 
 
-            SetIntDatas({ip: resPattern.ip, org: resPattern.organization, country: resPattern.country_name, city: resPattern.city });
+            SetIntDatas({
+                ip: resPattern.ip,
+                org: resPattern.organization,
+                country: resPattern.country_name,
+                city: resPattern.city,
+                country_flag: resPattern.country_flag,
+                currency: resPattern.currency,
+                calling_code: resPattern.calling_code,
+                continent_name: resPattern.continent_name
+            });
 
         } catch {
             console.log("dszdzd");
@@ -47,28 +57,82 @@ function IpDatas() {
             
             { intDatas.ip !== "" &&
                 <div className="row mt-2">
-                    <div className="col-12">
-                        <div className="d-flex flex-column align-items-center">
-                            <p>
+                    
+                    <div className="d-flex flex-column align-items-center">
+                        <p>
                                 <a className="btn " style={{background: "transparent", color: "#F39200", border: "1px solid #F39200"}} onClick={() => setCollapseState(collapseState === "show" ? "" : "show")} data-bs-toggle="collapse" href="#contentId" aria-expanded="false" aria-controls="contentId">
                                     { collapseState === "show" ? "Show less" : "Show more"}
                                 </a>
-                            </p>
+                        </p>
+                        <div className="col-12 mt-3">
                             <div className={`collapse ${collapseState}`} id="contentId">
-                                <div className="card card-body">
-                                    Org: {intDatas.org} <br />
-                                    Region: {intDatas.city} <br />
-                                    Pays: {intDatas.country} <br />
-                                    Ip: {intDatas.ip} 
+                             
+                                
+                                <div className="row">
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 130, paddingLeft: 10, fontSize: 20}}>Organisation</legend>
+                                            
+                                                {intDatas.org}
+                                        </fieldset>
+                                    </div>
+
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 82, paddingLeft: 10, fontSize: 20}}>City</legend>
+                                            
+                                                {intDatas.city}
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 90, paddingLeft: 10, fontSize: 20}}>Country</legend>
+                                            
+                                               <img src={intDatas.country_flag} width="40" alt="country_flag" /> {intDatas.country} {intDatas.calling_code} 
+                                        </fieldset>
+                                    </div>
+                                
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 36, paddingLeft: 10, fontSize: 20}}>Ip</legend>
+                                            
+                                                {intDatas.ip}
+                                        </fieldset>
+                                    </div>
+                                
+
+                                </div>
+
+                                <div className="row">
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 108, paddingLeft: 10, fontSize: 20}}>Continent</legend>
+                                            
+                                               {intDatas.continent_name} 
+                                        </fieldset>
+                                    </div>
+                                
+                                    <div className="col-12 col-sm-6 mb-4">
+                                        <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 96, paddingLeft: 10, fontSize: 20}}>Currency</legend>
+                                            
+                                                {intDatas.currency.symbol} ({intDatas.currency.name})
+                                        </fieldset>
+                                    </div>
+                                
 
                                 </div>
                             </div>
                         </div>
                             
                     </div>
+                    
                 </div>
             }
-
+                                        
         </>
     );
 }
@@ -167,6 +231,18 @@ class Home extends Component {
                     </div>
 
                     <IpDatas />
+
+                    <div className="context container d-flex justify-content-center py-2">
+                        <a role="button" href="https://twitter.com/yioxreborn2048" target="_blank" className="btn btn-lg btn-floating mx-2 icon-tw" style={{ color: "white"}} rel="noreferrer" >
+                            <i className="fab fa-twitter"></i>
+                        </a>
+                        <a role="button" href="https://www.youtube.com/@yaodabara" target="_blank" className="btn btn-lg btn-floating mx-2 icon-kedin" style={{ color: "white"}} rel="noreferrer">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                        <a role="button" href="https://www.linkedin.com/in/dabarayao" target="_blank" className="btn btn-lg btn-floating mx-2 icon-you" style={{ color: "white"}} rel="noreferrer">
+                            <i className="fab fa-youtube"></i>
+                        </a>
+                    </div>
                     
                     
                 </div>
