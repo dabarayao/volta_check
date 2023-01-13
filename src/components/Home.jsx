@@ -10,6 +10,10 @@ import axios from 'axios';
 import logo from "../assets/volta_check.png";
 import 'bootstrap/dist/css/bootstrap.css';
 
+/* link for the ip datas api 
+https://app.ipgeolocation.io/
+*/
+
 
 function IpDatas() {
     
