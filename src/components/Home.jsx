@@ -79,7 +79,7 @@ function IpDatas() {
 
                                     <div className="col-12 col-sm-6 mb-4">
                                         <fieldset className="position-relative" style={{ padding: "30px", border: "3px solid #F39200", background: "rgba(243, 146, 0, 0.1)" }} >
-                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 82, paddingLeft: 10, fontSize: 20}}>City</legend>
+                                                <legend style={{position: 'absolute', top: -20, left: 10, background: "white", width: 53, paddingLeft: 10, fontSize: 20}}>City</legend>
                                             
                                                 {intDatas.city}
                                         </fieldset>
@@ -149,10 +149,13 @@ class Home extends Component {
             myPic: "https://siriusntech.com/wp-content/uploads/2021/12/digitalisation.jpg"
         };
 
+        this.reloadChecker = this.reloadChecker.bind(this);
     }
 
 
-
+    reloadChecker = () => {
+        this.setState({speedMbps: [0]});
+    }
 
    
     
@@ -193,14 +196,16 @@ class Home extends Component {
                                     </Title>
                                     <Export enabled={true} /> */}
                                 </CircularGauge> <br />
+
                                 <div className="fw-bold" style={{ fontSize: "3.5vh", opacity: this.state.speedMbps.length < 6 ? "0.5" : "1"} }>{Math.max(...this.state.speedMbps)} Mbps &nbsp;
-                                    { this.state.speedMbps.length < 6 &&
+                                    { this.state.speedMbps.length < 6 ?
                                     <div className="spinner-grow" style={{background: "#F39200"}} role="status">
                                        <span className="visually-hidden">Loading...</span>
-                                    </div> }
+                                    </div> : <button type="button" className="btn btn-light" onClick={this.reloadChecker} style={{background: "transparent", border: "2px solid #3390F3", borderRadius: 50, height: 44}}><i className="fas fa-redo-alt"></i></button> }
                                 
                                 </div>
 
+                                {this.state.speedMbps.length < 6 &&
                                     <ReactInternetSpeedMeter
                                         txtSubHeading={` Mbps`}
                                         outputType="alert"
@@ -218,11 +223,12 @@ class Home extends Component {
                                                 speedMbps: [...this.state.speedMbps, speed]
                                             });
                                             if (this.state.speedMbps.length > 5) {
-                                                for (var i = 1; i < 100; i++)
-                                                  window.clearInterval(i);
+                                                for (var i = 1; i < 9999999; i++)
+                                                    window.clearInterval(i);
                                             }
                                         }}
                                     />
+                                }
                                 
                        
     
