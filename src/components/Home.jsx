@@ -248,6 +248,9 @@ class Home extends Component {
                         <a role="button" href="https://www.linkedin.com/in/dabarayao" target="_blank" className="btn btn-lg btn-floating mx-2 icon-you" style={{ color: "white"}} rel="noreferrer">
                             <i className="fab fa-youtube"></i>
                         </a>
+                        <a role="button" href="https://linktr.ee/dabarayao" target="_blank" className="btn btn-lg btn-floating mx-2 icon-kedin" style={{ color: "white"}} rel="noreferrer">
+                            <i className="fas fa-link"></i>
+                        </a>
                     </div>
                     
                     
