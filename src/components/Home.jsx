@@ -146,7 +146,7 @@ class Home extends Component {
         
         this.state = {
             speedMbps: [0],
-            myPic: "https://siriusntech.com/wp-content/uploads/2021/12/digitalisation.jpg"
+            myPic: "https://dabarayao.com/wp-content/uploads/2023/02/IMG_20220306_154229_307.jpg"
         };
 
         this.reloadChecker = this.reloadChecker.bind(this);
@@ -216,7 +216,7 @@ class Home extends Component {
                                         thresholdUnit='megabyte' // "byte" , "kilobyte", "megabyte" 
                                         threshold={100}
                                         imageUrl={this.state.myPic}
-                                        downloadSize="660000"  //bytes
+                                        downloadSize="1100000"  //bytes
                                         callbackFunctionOnNetworkDown={(speed) => console.log(`Internet speed is down ${speed}`)}
                                         callbackFunctionOnNetworkTest={(speed) => {
                                             this.setState({
