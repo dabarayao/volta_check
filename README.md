@@ -10,14 +10,14 @@
     What is your download speed? In a few seconds, the "Volta check" Internet speed test evaluates the speed of your Network.
     <br/>
     <br/>
-    <a href="https://github.com/ShaanCoding/ReadME-Generator"><strong>Explore the docs »</strong></a>
+    <a href="https://voltacheck.netlify.app/"><strong>View Demo »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/ShaanCoding/ReadME-Generator">View Demo</a>
+    <a href="https://github.com/mikayiox/volta_check">Explore the docs</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Report Bug</a>
+    <a href="https://github.com/mikayiox/volta_check/issues">Report Bug</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Request Feature</a>
+    <a href="https://github.com/mikayiox/volta_check/issues">Request Feature</a>
   </p>
 </p>
 
