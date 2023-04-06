@@ -39,7 +39,7 @@
 
 ## About The Project
 
-![Screen Shot](src/assets/screenshot1.png)
+![Screen Shot](src/assets/volta_check_screenshot1.png)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
