@@ -10,18 +10,18 @@
     What is your download speed? In a few seconds, the "Volta check" Internet speed test evaluates the speed of your Network.
     <br/>
     <br/>
-    <a href="https://github.com/ShaanCoding/ReadME-Generator"><strong>Explore the docs »</strong></a>
+    <a href="https://voltacheck.netlify.app/"><strong>View Demo »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/ShaanCoding/ReadME-Generator">View Demo</a>
+    <a href="https://github.com/mikayiox/volta_check">Explore the docs</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Report Bug</a>
+    <a href="https://github.com/mikayiox/volta_check/issues">Report Bug</a>
     .
-    <a href="https://github.com/ShaanCoding/ReadME-Generator/issues">Request Feature</a>
+    <a href="https://github.com/mikayiox/volta_check/issues">Request Feature</a>
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/ShaanCoding/ReadME-Generator/total) ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
+![Downloads](https://img.shields.io/github/downloads/mikayiox/volta_check/total) ![Contributors](https://img.shields.io/github/contributors/mikayiox/volta_check?color=dark-green) ![Issues](https://img.shields.io/github/issues/mikayiox/volta_check) ![License](https://img.shields.io/github/license/mikayiox/volta_check) 
 
 ## Table Of Contents
 
@@ -39,7 +39,7 @@
 
 ## About The Project
 
-![Screen Shot](src/assets/screenshot1.png)
+![Screen Shot](src/assets/volta_check_screenshot1.png)
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
 
