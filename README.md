@@ -21,7 +21,7 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/ShaanCoding/ReadME-Generator/total) ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
+![Downloads](https://img.shields.io/github/downloads/mikayiox/volta_check/total) ![Contributors](https://img.shields.io/github/contributors/mikayiox/volta_check?color=dark-green) ![Issues](https://img.shields.io/github/issues/mikayiox/volta_check) ![License](https://img.shields.io/github/license/mikayiox/volta_check) 
 
 ## Table Of Contents
 
