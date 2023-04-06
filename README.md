@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/ShaanCoding/ReadME-Generator">
-    <img src="src/assets/volta_check.png" alt="Logo" width="300">
+    <img src="src/assets/volta_check.jpg" alt="Logo" width="300">
   </a>
 
   <h3 align="center">Volta check</h3>
